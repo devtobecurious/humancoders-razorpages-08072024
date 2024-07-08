@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{BDB412DE-B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SdA.AFrodoJourney.Core.Models", "SdA.AFrodoJourney.Core.Models\SdA.AFrodoJourney.Core.Models.csproj", "{8CE21875-3A3C-4E8C-84CF-79D45BF7DFCB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UIs", "UIs", "{9168B935-439D-443B-AA57-FE2D67E48710}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFrodoMovement.Console.UI", "AFrodoMovement.Console.UI\AFrodoMovement.Console.UI.csproj", "{852F4E09-B483-497D-ADCE-D59BB0BF4C70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +27,18 @@ Global
 		{8CE21875-3A3C-4E8C-84CF-79D45BF7DFCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CE21875-3A3C-4E8C-84CF-79D45BF7DFCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CE21875-3A3C-4E8C-84CF-79D45BF7DFCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{852F4E09-B483-497D-ADCE-D59BB0BF4C70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{852F4E09-B483-497D-ADCE-D59BB0BF4C70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{852F4E09-B483-497D-ADCE-D59BB0BF4C70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{852F4E09-B483-497D-ADCE-D59BB0BF4C70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{603AE9A5-29F5-4FA8-B145-A9B602B2FF58} = {9168B935-439D-443B-AA57-FE2D67E48710}
 		{8CE21875-3A3C-4E8C-84CF-79D45BF7DFCB} = {BDB412DE-B3C1-4E29-A2BC-1EC52FC01C0D}
+		{852F4E09-B483-497D-ADCE-D59BB0BF4C70} = {9168B935-439D-443B-AA57-FE2D67E48710}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D18CEE6-DF76-44DA-8D2D-57489D93A064}
