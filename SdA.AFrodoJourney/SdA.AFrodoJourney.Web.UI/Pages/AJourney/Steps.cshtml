@@ -1,0 +1,36 @@
+﻿@page
+@model StepsModel
+@{
+	Journey aJourney = new(new Step() { CurrentLocation = new() { Id = 1, Label = "La comté " } }, 
+									new Step() { CurrentLocation = new() { Id = 2, Label = "Moriah" } }, 
+									new Step() { CurrentLocation = new() { Id = 3, Label = "Minas tirith" }, MeetPerson = new Person() { Id = 1, Surname = "Gimli" } });
+}
+
+<table class="table centered">
+	<thead>
+		<tr>
+			<th>Date</th>
+			<th>Le lieu</th>
+			<th>La personne rencontrée</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in aJourney.Steps)
+		{
+			<tr>
+				<td>
+					@item.Date.ToString("dddd dd MMMM (MM) yyyy")
+				</td>
+				<td>
+					@("=> " + item.CurrentLocation.Label)
+				</td>
+				<td>
+					@if(item.MeetPerson != null)
+					{
+						@item.MeetPerson.Surname
+					}
+				</td>
+			</tr>
+		}		
+	</tbody>
+</table>

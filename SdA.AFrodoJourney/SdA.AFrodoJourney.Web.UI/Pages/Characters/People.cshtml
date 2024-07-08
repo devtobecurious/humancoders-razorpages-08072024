@@ -1,12 +1,12 @@
 ﻿@page
-@using SdA.AFrodoJourney.Core.Models
+@* @using SdA.AFrodoJourney.Core.Models *@
 
 @model PeopleModel
 
 @{
-	var list = new List<People>()
+	var list = new List<Person>()
 	{
-		new People() { Id = 1, Surname = "Frodon" },
+		new Person() { Id = 1, Surname = "Frodon" },
 		new () { Id = 2, Surname = "Sam" },
 		new () { Id = 3, Surname = "Gimli" },
 	};

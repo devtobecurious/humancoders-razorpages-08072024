@@ -3,7 +3,7 @@
     /// <summary>
     /// 
     /// </summary>
-    public class People
+    public class Person
     {
         #region Properties
         public int Id { get; set; }
