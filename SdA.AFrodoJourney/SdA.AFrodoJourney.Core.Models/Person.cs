@@ -19,6 +19,8 @@
 		{
 			this.defaultMoving = defaultMoving;
 		}
+
+		public Person() : this(null) { }
 		#endregion
 
 		#region Public methods
