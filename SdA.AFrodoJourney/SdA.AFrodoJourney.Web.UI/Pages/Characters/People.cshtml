@@ -1,0 +1,33 @@
+﻿@page
+@using SdA.AFrodoJourney.Core.Models
+
+@model PeopleModel
+
+@{
+	var list = new List<People>()
+	{
+		new People() { Id = 1, Surname = "Frodon" },
+		new () { Id = 2, Surname = "Sam" },
+		new () { Id = 3, Surname = "Gimli" },
+	};
+}
+
+<table>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Prénom</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in list)
+		{
+			<tr>
+				<td>@item.Id</td>
+				<td>@item.Surname</td>
+			</tr>
+		}
+		
+	</tbody>
+</table>
+

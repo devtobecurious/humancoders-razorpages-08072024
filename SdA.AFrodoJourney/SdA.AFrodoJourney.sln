@@ -5,6 +5,10 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SdA.AFrodoJourney.Web.UI", "SdA.AFrodoJourney.Web.UI\SdA.AFrodoJourney.Web.UI.csproj", "{603AE9A5-29F5-4FA8-B145-A9B602B2FF58}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{BDB412DE-B3C1-4E29-A2BC-1EC52FC01C0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SdA.AFrodoJourney.Core.Models", "SdA.AFrodoJourney.Core.Models\SdA.AFrodoJourney.Core.Models.csproj", "{8CE21875-3A3C-4E8C-84CF-79D45BF7DFCB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{603AE9A5-29F5-4FA8-B145-A9B602B2FF58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{603AE9A5-29F5-4FA8-B145-A9B602B2FF58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{603AE9A5-29F5-4FA8-B145-A9B602B2FF58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CE21875-3A3C-4E8C-84CF-79D45BF7DFCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CE21875-3A3C-4E8C-84CF-79D45BF7DFCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CE21875-3A3C-4E8C-84CF-79D45BF7DFCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CE21875-3A3C-4E8C-84CF-79D45BF7DFCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8CE21875-3A3C-4E8C-84CF-79D45BF7DFCB} = {BDB412DE-B3C1-4E29-A2BC-1EC52FC01C0D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D18CEE6-DF76-44DA-8D2D-57489D93A064}
