@@ -6,9 +6,35 @@
 @{
 	//Layout = "_LayoutSansBootstrap";
 
-	
+
 	// Model.PersonList
 }
+<div class="row">
+	<div class="col">
+		<h2>Filtres</h2>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col">
+		<label>Contrée</label>
+	</div>
+	<div class="col">
+		@* <select>
+			@foreach (var item in Model.LocationList)
+			{
+				<option value="@item.Id">@item.Label</option>
+			}
+		</select> *@
+
+		@{
+			var listItems = Model.LocationList.Select(item => new SelectListItem() { Text= item.Label, Value = item.Id.ToString() });
+		}
+
+		<select asp-items="listItems">
+		</select>
+	</div>
+</div>
 
 <table>
 	<thead>

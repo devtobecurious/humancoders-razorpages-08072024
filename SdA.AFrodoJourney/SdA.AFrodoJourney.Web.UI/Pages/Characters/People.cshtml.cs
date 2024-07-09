@@ -18,16 +18,18 @@ namespace SdA.AFrodoJourney.Web.UI.Pages.Characters
 			logger.Log("On get people");
 
 			this.PersonList = business.GetAll();
-			//this.PersonList = new List<Person>()
-			//{
-			//	new Person() { Id = 1, Surname = "Frodon" },
-			//	new () { Id = 2, Surname = "Sam" },
-			//	new () { Id = 3, Surname = "Gimli" },
-			//};
+
+			this.LocationList = new()
+			{
+				new() { Id = 1, Label = "Comté"},
+				new() { Id = 2, Label = "Moriah"}
+			};
 		}
 
 		#region Properties
 		public List<Person> PersonList { get; private set; }
+
+		public List<Location> LocationList { get; private set; }
 		#endregion
 	}
 }

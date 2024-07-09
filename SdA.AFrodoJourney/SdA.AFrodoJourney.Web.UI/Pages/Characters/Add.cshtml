@@ -1,0 +1,41 @@
+﻿@page
+@model SdA.AFrodoJourney.Web.UI.Pages.Characters.AddModel
+@{
+}
+
+
+<form method="post" class="row g-3 needs-validation" novalidate>
+  <div class="col-md-4">
+    <label for="validationCustom01" class="form-label">Prénom</label>
+    <input type="text" class="fom-control"  asp-for="ThePerson.Surname" id="validationCustom01">
+        <span asp-validation-for="ThePerson.Surname"></span>
+        <br />
+        <label for="validationCustom02" class="form-label">Hauteur</label>
+        <input class="fom-control" asp-for="ThePerson.Height" id="validationCustom02">
+        <span asp-validation-for="ThePerson.Height"></span>
+    <div class="valid-feedback">
+      Prénom
+    </div>
+  </div>
+  @* <div class="col-md-4">
+    <label for="validationCustom02" class="form-label">Last name</label>
+    <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div> *@
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Sauvegarder</button>
+  </div>
+</form>
+
+
+@section BeforeEndBody 
+{
+
+}
+
+@section scripts 
+{
+    <partial name="_ValidationScriptsPartial" />
+}
