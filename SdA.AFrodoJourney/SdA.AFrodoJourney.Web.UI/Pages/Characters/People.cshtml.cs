@@ -4,18 +4,18 @@ using SdA.AFrodoJourney.Core.Models;
 
 namespace SdA.AFrodoJourney.Web.UI.Pages.Characters
 {
-	public class PeopleModel : PageModel
+	public class PeopleModel(IGetAllPeopleBusiness business) : PageModel
 	{
-		private readonly IGetAllPeopleBusiness business;
+		//private readonly IGetAllPeopleBusiness business;
 
-		public PeopleModel(IGetAllPeopleBusiness business)
-		{
-			this.business = business;
-		}
+		//public PeopleModel(IGetAllPeopleBusiness business)
+		//{
+		//	this.business = business;
+		//}
 
 		public void OnGet()
 		{
-			this.PersonList = this.business.GetAll();
+			this.PersonList = business.GetAll();
 			//this.PersonList = new List<Person>()
 			//{
 			//	new Person() { Id = 1, Surname = "Frodon" },
