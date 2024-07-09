@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 #region Injection de dépendances
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<IGetAllPeopleBusiness, InMemoryGetAllPeopleBusiness>();
+builder.Services.AddScoped<IGetOneJourneyBusiness, InMemoryGetOneJourneyBusiness>();
 #endregion
 
 var app = builder.Build();
