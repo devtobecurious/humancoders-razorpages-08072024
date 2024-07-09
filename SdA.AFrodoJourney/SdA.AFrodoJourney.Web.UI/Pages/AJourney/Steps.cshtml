@@ -1,35 +1,27 @@
 ﻿@page
 @model StepsModel
 @{
-
-
+	
 }
-
-<table class="table centered">
-	<thead>
-		<tr>
-			<th>Date</th>
-			<th>Le lieu</th>
-			<th>La personne rencontrée</th>
-		</tr>
-	</thead>
-	<tbody>
-		@foreach (var item in Model.Journey.Steps)
-		{
-			<tr>
-				<td>
-					@item.Date.ToString("dddd dd MMMM (MM) yyyy")
-				</td>
-				<td>
-					@("=> " + item.CurrentLocation.Label)
-				</td>
-				<td>
-					@if(item.MeetPerson != null)
-					{
-						@item.MeetPerson.Surname
-					}
-				</td>
-			</tr>
-		}		
-	</tbody>
-</table>
+<form method="post">
+	<div class="">
+		<select asp-for="StepsJourney.CurrentLocation.Id">
+			@foreach (var item in Model.LocationList)
+			{
+				<option value="@item.Id">@item.Label</option>
+			}
+		</select>
+	</div>
+	<div class="">
+		<input asp-for="StepsJourney.Date" />
+	</div>
+	<div class="">
+		<select asp-for="StepsJourney.MeetPerson.Id">
+			@foreach (var item in Model.PersonList)
+			{
+				<option value="@item.Id">@item.Surname</option>
+			}
+		</select>
+	</div>
+	<button type="submit">Envoyer</button>
+</form>

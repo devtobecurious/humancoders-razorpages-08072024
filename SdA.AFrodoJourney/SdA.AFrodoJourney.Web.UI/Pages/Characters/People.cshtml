@@ -41,6 +41,7 @@
 		<tr>
 			<th>ID</th>
 			<th>Prénom</th>
+			<th></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -49,6 +50,10 @@
 			<tr>
 				<td>@item.Id</td>
 				<td>@item.Surname</td>
+				<td>
+					@* <a href="/characters/edit/@item.Id">Editer</a> *@
+					<a asp-page="Edit" asp-route-id="@item.Id">Editer</a>
+				</td>
 			</tr>
 		}
 		

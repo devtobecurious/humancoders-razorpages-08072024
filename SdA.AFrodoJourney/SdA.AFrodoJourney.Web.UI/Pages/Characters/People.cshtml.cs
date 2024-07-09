@@ -4,32 +4,32 @@ using SdA.AFrodoJourney.Core.Models;
 
 namespace SdA.AFrodoJourney.Web.UI.Pages.Characters
 {
-	public class PeopleModel(IGetAllPeopleBusiness business, SdA.AFrodoJourney.Core.Interfaces.Loggers.ILogger logger) : PageModel
-	{
-		//private readonly IGetAllPeopleBusiness business;
+    public class PeopleModel(IGetAllPeopleBusiness business, SdA.AFrodoJourney.Core.Interfaces.Loggers.ILogger logger) : PageModel
+    {
+        //private readonly IGetAllPeopleBusiness business;
 
-		//public PeopleModel(IGetAllPeopleBusiness business)
-		//{
-		//	this.business = business;
-		//}
+        //public PeopleModel(IGetAllPeopleBusiness business)
+        //{
+        //	this.business = business;
+        //}
 
-		public void OnGet()
-		{
-			logger.Log("On get people");
+        public void OnGet()
+        {
+            logger.Log("On get people");
 
-			this.PersonList = business.GetAll();
+            this.PersonList = business.GetAll();
 
-			this.LocationList = new()
-			{
-				new() { Id = 1, Label = "Comté"},
-				new() { Id = 2, Label = "Moriah"}
-			};
-		}
+            this.LocationList = new()
+            {
+                new() { Id = 1, Label = "Comté"},
+                new() { Id = 2, Label = "Moriah"}
+            };
+        }
 
-		#region Properties
-		public List<Person> PersonList { get; private set; }
+        #region Properties
+        public List<Person> PersonList { get; private set; }
 
-		public List<Location> LocationList { get; private set; }
-		#endregion
-	}
+        public List<Location> LocationList { get; private set; }
+        #endregion
+    }
 }
