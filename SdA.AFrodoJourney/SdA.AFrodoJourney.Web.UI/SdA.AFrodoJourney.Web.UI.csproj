@@ -10,6 +10,7 @@
     <ProjectReference Include="..\SdA.AFrodoJourney.Core.Interfaces\SdA.AFrodoJourney.Core.Interfaces.csproj" />
     <ProjectReference Include="..\SdA.AFrodoJourney.Core.Models\SdA.AFrodoJourney.Core.Models.csproj" />
     <ProjectReference Include="..\SdA.AFrodoJourney.Core.Services.Businesses\SdA.AFrodoJourney.Core.Services.Businesses.csproj" />
+    <ProjectReference Include="..\SdA.AFrodoJourney.Core.Services.Infrastructures\SdA.AFrodoJourney.Core.Services.Infrastructures.csproj" />
   </ItemGroup>
 
 </Project>

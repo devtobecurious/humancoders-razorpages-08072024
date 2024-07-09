@@ -4,10 +4,11 @@ using SdA.AFrodoJourney.Core.Models;
 
 namespace SdA.AFrodoJourney.Web.UI.Pages.AJourney
 {
-	public class StepsModel(IGetOneJourneyBusiness business) : PageModel
+	public class StepsModel(IGetOneJourneyBusiness business, SdA.AFrodoJourney.Core.Interfaces.Loggers.ILogger logger) : PageModel
 	{
 		public void OnGet()
 		{
+			logger.Log("On get ");
 			this.Journey = business.GetOneWithSteps();
 		}
 

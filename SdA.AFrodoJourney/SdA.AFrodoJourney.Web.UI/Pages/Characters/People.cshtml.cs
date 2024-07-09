@@ -4,7 +4,7 @@ using SdA.AFrodoJourney.Core.Models;
 
 namespace SdA.AFrodoJourney.Web.UI.Pages.Characters
 {
-	public class PeopleModel(IGetAllPeopleBusiness business) : PageModel
+	public class PeopleModel(IGetAllPeopleBusiness business, SdA.AFrodoJourney.Core.Interfaces.Loggers.ILogger logger) : PageModel
 	{
 		//private readonly IGetAllPeopleBusiness business;
 
@@ -15,6 +15,8 @@ namespace SdA.AFrodoJourney.Web.UI.Pages.Characters
 
 		public void OnGet()
 		{
+			logger.Log("On get people");
+
 			this.PersonList = business.GetAll();
 			//this.PersonList = new List<Person>()
 			//{
